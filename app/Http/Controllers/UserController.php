@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Oursers;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -21,7 +22,7 @@ class UserController extends Controller
             'Phone'=>['required'],
         ]);
         // Now the data has been validated completely, we then create a new instance of the validated in the students_enrollments table using the Students_enrollment model
-        $user = new User();
+        $user = new Oursers();
 
         $user->name = request('Name');
         $user->email = request('Email');
