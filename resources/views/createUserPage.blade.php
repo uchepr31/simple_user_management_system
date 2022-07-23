@@ -38,8 +38,8 @@
     <label for="email"><b>Email</b></label>
     <input type="email" placeholder="Enter Email" name="Email"><br><br><br><br>
 
-    <label for="psw"><b>Phone</b></label>
-    <input type="text" placeholder="Enter Phone" name="Phone"><br><br> 
+    {{-- <label for="psw"><b>Phone</b></label>
+    <input type="text" placeholder="Enter Phone" name="Phone"><br><br>  --}}
      
       <button type="submit" class="signupbtn">Create</button>
     

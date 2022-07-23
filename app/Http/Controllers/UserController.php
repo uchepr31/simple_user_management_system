@@ -18,14 +18,14 @@ class UserController extends Controller
         $validated = $request->validate([
             'Name' =>['required',  'max:255'],
             'Email' =>['required','unique:users,email', 'max:255'],
-            'Phone'=>['required', 'max:255'],
+            // 'Phone'=>['required', 'max:255'],
         ]);
         // Now the data has been validated completely, we then create a new instance of the validated in the students_enrollments table using the Students_enrollment model
         $user = new User();
 
         $user->name = request('Name');
         $user->email = request('Email');
-        $user->phone = request('Phone');
+        // $user->phone = request('Phone');
 
         //We finally save the collected data in the database
         $user->save();
