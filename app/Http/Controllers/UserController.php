@@ -22,7 +22,7 @@ class UserController extends Controller
             'Phone'=>['required'],
         ]);
         // Now the data has been validated completely, we then create a new instance of the validated in the students_enrollments table using the Students_enrollment model
-        $user = new Oursers();
+        $user = new User();
 
         $user->name = request('Name');
         $user->email = request('Email');
