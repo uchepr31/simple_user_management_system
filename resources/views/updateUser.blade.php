@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>create new user page</title>
+    <title>Update user page</title>
 </head>
 <body>
     <!-- if validation in the controller fails, show the errors -->
@@ -25,24 +25,24 @@
 @endif
 
 
- <form  method="POST" action="storeNewlyCreatedUserDetails" style="border:1px solid #ccc"  enctype="multipart/form-data">
+ <form  method="POST" action="/storeEditedUserDetails" style="border:1px solid #ccc"  enctype="multipart/form-data">
 {{-- @method('Put') --}}
 @csrf
   <div class="container">
-    <h1>Create a new User's Account</h1>
-    <p>Please fill in this form to create your account.</p>
+    <h1>Update User's Account</h1>
+    <p>Please fill in this form to update your account.</p>
     <hr><br><br> 
+    <input type="hidden" name="id" value = "{{$users->id}}">
     <label for="user-name"><b>Name</b></label>
-    <input type="text" placeholder="Enter username" name="Name"><br><br><br><br> 
+    <input type="text" placeholder="Enter username" name="Name" required value ="{{$users->name}}" ><br><br><br><br> 
 
     <label for="email"><b>Email</b></label>
-    <input type="email" placeholder="Enter Email" name="Email"><br><br><br><br>
+    <input type="email" placeholder="Enter Email" name="Email" required value ="{{ $users->email}} "><br><br><br><br>
 
     <label for="psw"><b>Phone</b></label>
-    <input type="text" placeholder="Enter Phone" name="Phone"><br><br> 
+    <input type="text" placeholder="Enter Phone" name="Phone" required value ="{{ $users->password}} "><br><br> 
      
-      <button type="submit" class="signupbtn">Create</button>
-      <a href="/user"><button>Show all enrolled users</button></a>
+    <button type="submit" class="signupbtn">Update</button>
     
   </div>
 </form> 

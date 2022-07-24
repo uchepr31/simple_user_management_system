@@ -25,3 +25,9 @@ Route::post('/storeNewlyCreatedUserDetails', [UserController::class, 'createUser
 Route::get('/edit', [UserController::class, 'editPage']);
 Route::get('/updateUser/{id}', [UserController::class, 'showWhatWeWantToEdit']);
 Route::post('/storeEditedUserDetails', [UserController::class, 'editUsers']);
+
+//This is for deleting a user's account
+Route::get('/delete/{id}', [UserController::class, 'deleteUser']);
+
+//This is for getting all the users from the database
+Route::get('/user', [UserController::class, 'getUsers']);

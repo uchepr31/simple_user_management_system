@@ -34,4 +34,57 @@ class UserController extends Controller
         return redirect()->back();
 
     }
+
+        // for the edit users
+    
+        public function editPage(){
+            $users = User::get();       
+            return view('Edituser', compact('users')); 
+    
+            }
+         
+        public function showWhatWeWantToEdit($id){
+                $users = User::find($id);       
+                return view('updateUser', compact('users')); 
+                  
+        }
+    
+    
+        public function editUsers(Request $request){
+           //To validate the data coming from the input fields
+                $request->validate([
+                'Name' =>['required'],
+                'Email' =>['required'],
+                'Phone'=>['required']
+            ]);
+    
+            // Now we find that particular user using the id 
+            $user = User::find($request->id);
+             
+            // Here we collect the edited or updated details
+            $user->name = $request->Name;
+            $user->email = $request->Email;
+            $user->phone = $request->Phone;
+           
+            //We finally save the edited details in the database
+            $user->save();
+              
+            session() ->flash("success", "user's details updated successfully");
+            return redirect('/edit');
+    
+        }
+
+          //for the delete user
+    public function deleteUser($id){
+        $users = User::find($id);
+        $users->delete();
+        session()->flash('success', ' details deleted successfully');
+        return redirect()->back();             
+    }
+
+        //for the get users
+    public function getUsers(){
+    $users = User::get();
+    return view('Users', compact('users'));  
+    }
 }
