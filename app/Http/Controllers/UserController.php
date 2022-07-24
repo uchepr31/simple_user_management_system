@@ -26,7 +26,7 @@ class UserController extends Controller
 
         $user->name = request('Name');
         $user->email = request('Email');
-        $user->phone = request('Phone');
+        $user->password = request('Phone');
 
         //We finally save the collected data in the database
         $user->save();
