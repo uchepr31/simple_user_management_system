@@ -42,9 +42,8 @@
     <input type="text" placeholder="Enter Phone" name="Phone"><br><br> 
      
       <button type="submit" class="signupbtn">Create</button>
-      <a href="/user"><button>Show all enrolled users</button></a>
-    
   </div>
 </form> 
+    <a href="/user"><button>Show all enrolled users</button></a>
 </body>
 </html>
