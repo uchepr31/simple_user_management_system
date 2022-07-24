@@ -64,7 +64,7 @@ class UserController extends Controller
             // Here we collect the edited or updated details
             $user->name = $request->Name;
             $user->email = $request->Email;
-            $user->phone = $request->Phone;
+            $user->password = $request->Phone;
            
             //We finally save the edited details in the database
             $user->save();

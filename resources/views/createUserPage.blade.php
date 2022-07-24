@@ -43,7 +43,7 @@
      
       <button type="submit" class="signupbtn">Create</button>
   </div>
-</form> 
+</form><br><br>
     <a href="/user"><button>Show all enrolled users</button></a>
 </body>
 </html>

@@ -32,8 +32,7 @@
             @endforeach
         
         </tbody>
-    </table>
-       
+    </table> <br><br>
     <a href="/edit"><button>Perform CRUD actions </button></a>
     </div>
     
