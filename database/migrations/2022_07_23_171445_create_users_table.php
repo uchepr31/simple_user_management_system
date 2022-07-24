@@ -17,7 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->string('password');
+            $table->string('password');  
+            // Please, I used the password column in the users table to store user's phone number because
+            //postgrels database is not allowing me to create a new column aside the default columns found the in the users table.  
             $table->timestamps();
         });
     }

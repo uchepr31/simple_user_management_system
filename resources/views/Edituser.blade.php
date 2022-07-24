@@ -18,8 +18,6 @@
                 <th>NAME</th>
                 <th>EMAIL</th>
                 <th>PHONE NUMBER</th>
-                {{-- <th>DATE CREATED</th>
-                <th>LAST DATE UPDATED</th> --}}
                 <th>ACTION</th>
             </tr>
         </thead>
